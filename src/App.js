@@ -21,9 +21,13 @@ const App = () => {
         {`Change to ${bColor === 'red' ? 'blue' : 'red'}`} 
       </button>
       <input
+        id="button-control"
         type="checkbox"
         onClick={checkboxClickHandler}
       />
+      <label htmlFor="button-control">
+        Disable button
+      </label>
     </div>
   );
 }
