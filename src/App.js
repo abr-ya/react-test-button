@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="App">
       <button
-        style={{backgroundColor: bColor}}
+        style={{backgroundColor: buttonActive ? bColor : 'gray'}}
         onClick={btnClickHandler}
         disabled={!buttonActive}
       >
