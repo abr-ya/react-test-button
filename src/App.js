@@ -15,6 +15,7 @@ const App = () => {
       >
         {`Change to ${bColor === 'red' ? 'blue' : 'red'}`} 
       </button>
+      <input type="checkbox" />
     </div>
   );
 }
