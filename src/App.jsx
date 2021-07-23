@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 const App = () => {
@@ -14,22 +14,23 @@ const App = () => {
   return (
     <div className="App">
       <button
-        style={{backgroundColor: buttonActive ? bColor : 'gray'}}
+        style={{ backgroundColor: buttonActive ? bColor : 'gray' }}
         onClick={btnClickHandler}
         disabled={!buttonActive}
+        type="button"
       >
-        {`Change to ${bColor === 'red' ? 'blue' : 'red'}`} 
+        {`Change to ${bColor === 'red' ? 'blue' : 'red'}`}
       </button>
-      <input
-        id="button-control"
-        type="checkbox"
-        onClick={checkboxClickHandler}
-      />
       <label htmlFor="button-control">
+        <input
+          id="button-control"
+          type="checkbox"
+          onClick={checkboxClickHandler}
+        />
         Disable button
       </label>
     </div>
   );
-}
+};
 
 export default App;

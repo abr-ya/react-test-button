@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/react-in-jsx-scope */
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
@@ -13,7 +15,7 @@ test('button turns blue when clicked', () => {
   const colorButton = screen.getByRole('button', { name: 'Change to blue' });
   fireEvent.click(colorButton);
   expect(colorButton).toHaveStyle({ backgroundColor: 'blue' });
-  expect(colorButton.textContent).toBe('Change to red');
+  expect(colorButton).toHaveTextContent('Change to red');
 });
 
 test('initial conditions', () => {
